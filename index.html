@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* NO MOVER */
+    body {
+      display: grid;
+      place-items: center;
+      min-height: 100svh;
+    }
+
+    #trabajo-container {
+      position: relative;
+    }
+
+    #preview {
+      position: absolute;
+      background: url(./13.png) no-repeat;
+      resize: both;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      overflow: hidden;
+      opacity: 50%;
+      z-index: 1000;
+    }
+    /* HASTA AQUÍ */
+    #trabajo {
+      width: 400px;
+      height: 300px;
+      --main-bg: #050044;
+      /*--main-fg: tomato;*/
+      --main-fg: #328fc1;
+      background-color: var(--main-bg);
+      align-content: center;
+      text-align: center;
+    }
+
+    .circulo {
+      height: 80px;
+      width: 80px;
+      border-radius: 50%;
+      border-width: 10px;
+      box-sizing: border-box;
+      position: relative;
+      margin: 0 auto;
+    }
+
+    .circulo.a {
+      border-style: solid;
+      background-color: var(--main-bg);
+      color: var(--main-fg);
+      margin-top: -70px;
+    }
+
+    .circulo.b {
+      height: 60px;
+      width: 60px;
+      border-style: hidden;
+      background-color: var(--main-fg);
+      top: -30px;
+      margin-bottom: -35px;
+    }
+
+    #pri { z-index: 999; margin-top: 20px; }
+    #sec { z-index: 998; }
+    #ter { z-index: 997; }
+    #cua { z-index: 996; }
+    #qui { z-index: 995; }
+  </style>
+  <title>Evaluación 2 (UI)</title>
+</head>
+
+<body>
+  <div id="trabajo-container">
+    <div id="trabajo">
+      <!-- Trabajar aquí -->
+      <div id="pri" class="circulo a"></div>
+      <div id="sec" class="circulo b"></div>
+      <div id="ter" class="circulo a"></div>
+      <div id="cua" class="circulo b"></div>
+      <div id="qui" class="circulo a"></div>
+    </div>
+    <div id="preview"></div>
+  </div>
+</body>
+
+</html>
